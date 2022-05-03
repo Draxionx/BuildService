@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Website Theme*/
+:root {
+    --hue-1: 231;
+    --hue-2: 47;
+    --bg-color: hsl(var(--hue-1), 100%, 97%);
+    --main-color-1: hsl(var(--hue-1), 100%, 60%);
+    --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
+    --main-color-2: hsl(var(--hue-2), 100%, 61%);
+    --main-color-2-dark-1: hsl(var(--hue-2), 82%, 55%);
+    --bg-color-1: hsl(var(--hue-1), 100%, 97%);
+    --bg-color-2: #ffff;
+    --bg-color-3: hsl(var(--hue-1), 100%, 98%);
+    --bg-color-transparent: rgba(255,255,255,0.6);
+    --heading-color: hsl(var(--hue-1), 61%, 24);
+    --text-color: hsl(var(--hue-1), 17%, 63%);
+}
+/* General Styles */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x:hidden;
+    background-color: var(--bg-color);
+    font-family: "Roboto", sans-serif
+}
+
+::selection {
+    background-color: hsl(var(--hue-1), 100%, 60%);
+    color: #ffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style:none;
+}
+
+/*Reusable CSS Code*/
+
+.container {
+    position:relative;
+    width: 100%;
+    max-width: 75rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+/*Navbar Styling*/
+
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.links {
+    background-color: red;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
