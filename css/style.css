@@ -15,6 +15,17 @@
     --bg-color-transparent: rgba(255,255,255,0.6);
     --heading-color: hsl(var(--hue-1), 61%, 24);
     --text-color: hsl(var(--hue-1), 17%, 63%);
+    --background: hsl(231, 15%, 18%);
+    --current-line: hsl(232, 14%, 31%);
+    --foreground: hsl(60, 30%, 96%);
+    --comment: hsl(225, 27%, 51%);
+    --cyan: hsl(191, 97%, 77%);
+    --green: hsl(135, 94%, 65%);
+    --orange: hsl(31, 100%, 71%);
+    --pink: hsl(326, 100%, 74%);
+    --purple: hsl(265, 89%, 78%);
+    --red: hsl(0, 100%, 67%);
+    --yellow: hsl(65, 92%, 76%);
 }
 
 /* General Styles */
@@ -29,7 +40,7 @@
 
 body {
     overflow-x:hidden;
-    background-color: var(--bg-color);
+    background-color: var(--background);
     font-family: "Roboto", sans-serif
 }
 
@@ -64,6 +75,23 @@ header {
     left:0;
     width: 100%;
     z-index: 10;
+    transition: 0.3s
+}
+
+header.scrolled {
+    background-color: var(--current-line);
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+header .logo {
+    height: 120px;
+    line-height: 120px;
+}
+
+header.scrolled .logo {
+    height: 80px;
+    line-height: 80px;
 }
 
 nav.container {
@@ -93,6 +121,7 @@ nav.container {
     font-size: 1.5rem;
     color: var(--heading-color);
     letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 .nav-link {
@@ -133,4 +162,19 @@ nav.container {
 
 .toggle-btn {
     color: var(--heading-color);
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--bg-color-2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    filter:brightness(0.75);
 }
