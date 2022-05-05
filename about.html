@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
+
     <title>Draxion</title>
 
     <!-- CSS Files -->
@@ -13,32 +16,39 @@
 
 <body>
 <header>
+    <a href="#" class="logo">DRAXION</a>
     <nav class="container">
-        <a href="#" class="logo">About</a>
         <div class="links">
             <ul>
                 <li>
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="/BuildService/index.html" class="nav-link" id="home">Home</a>
                 </li>
                 <li>
-                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="/BuildService/services.html" class="nav-link" id="services">Services</a>
                 </li>
                 <li>
-                    <a href="builds.html" class="nav-link">Builds</a>
+                    <a href="/BuildService/builds.html" class="nav-link" id="builds">Builds</a>
                 </li>
                 <li>
-                    <a href="about.html" class="nav-link">About</a>
+                    <a href="/BuildService/about.html" class="nav-link" id="about">About</a>
                 </li>
                 <li>
-                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="/BuildService/contact.html" class="nav-link" id="contact">Contact</a>
                 </li>
             </ul>
-            <i class="uil uil-keyboard toggle-btn"></i>
         </div>
     </nav>
 </header>
 
-<section style="height:1000px"></section>
+<main id="swup" class="transition-fade">
+    <section class="page-contents" id="about-section">
+        <div class ="text-wrap">
+            <h3 id="text-about" class="page-title" >About</h3>
+        </div>
+        <div id="about-container" class="container">
+        </div>
+    </section>
+</main>
 
 <!-- Javascript Files -->
 <script src="./js/app.js"></script>

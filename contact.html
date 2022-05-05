@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
+
     <title>Draxion</title>
 
     <!-- CSS Files -->
@@ -12,35 +15,77 @@
 </head>
 
 <body>
-<header>
-    <nav class="container">
-        <a href="#" class="logo">Contact</a>
-        <div class="links">
-            <ul>
-                <li>
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li>
-                    <a href="services.html" class="nav-link">Services</a>
-                </li>
-                <li>
-                    <a href="builds.html" class="nav-link">Builds</a>
-                </li>
-                <li>
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <i class="uil uil-keyboard toggle-btn"></i>
-        </div>
-    </nav>
-</header>
+    <header>
+        <a href="#" class="logo">DRAXION</a>
+        <nav class="container">
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="/BuildService/index.html" class="nav-link" id="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="/BuildService/services.html" class="nav-link" id="services">Services</a>
+                    </li>
+                    <li>
+                        <a href="/BuildService/builds.html" class="nav-link" id="builds">Builds</a>
+                    </li>
+                    <li>
+                        <a href="/BuildService/about.html" class="nav-link" id="about">About</a>
+                    </li>
+                    <li>
+                        <a href="/BuildService/contact.html" class="nav-link" id="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-<section style="height:1000px"></section>
+    <main id="swup" class="transition-fade">
+        <section class="page-contents" id="contact-section">
+            <div class ="text-wrap">
+                <h3 id="text-contact" class="page-title" >Contact</h3>
+            </div>
+            <div id="contact-container" class="container">
+                <div id="contact-text-wrapper">
+                    <p id="contact-text">
+                        Please don't hesitate to contact me about having a build done or any questions regarding the services I provide.<br>
+                        You may contact me through discord or the form below. Thank you!
+                        <br>
+                        <br>
+                        Discord: Draxion#0001
+                    </p>
+                </div>
 
-<!-- Javascript Files -->
-<script src="./js/app.js"></script>
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="message" rows="5" placeholder="How can I help?"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Javascript Files -->
+    <script src="./js/app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "DraxionCode@gmail.com",
+                Password : "DraxionCode1015110!",
+                To : 'Draxion1015@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Keyboard Build Service Enquiry",
+                Body : "Name: " + document.getElementById("name").value
+                        + "<br><br> Email: " + document.getElementById("email").value
+                        + "<br><br>  Message: " + document.getElementById("message").value
+            }).then(
+                message => alert("Message Sent Successfully")
+            );
+        }
+        //https://smtpjs.com/
+    </script>
 </body>
 </html>

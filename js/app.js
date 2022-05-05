@@ -1,5 +1,3 @@
-
-
 const header = document.querySelector("header");
 
 /* Sticky NavBar */
@@ -12,3 +10,6 @@ function stickyNavbar() {
 stickyNavbar();
 
 window.addEventListener("scroll", stickyNavbar);
+
+
+// -----------Contact Email----------- \\
