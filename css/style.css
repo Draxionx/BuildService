@@ -35,7 +35,7 @@
 body {
     overflow-x:hidden;
     background-color: var(--background);
-    font-family: "Roboto", sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0 auto;
 }
 
@@ -71,6 +71,7 @@ header {
     width: 100%;
     transition: 0.3s;
     padding-bottom: 50px;
+    z-index: 111;
 }
 
 header.scrolled {
@@ -117,16 +118,14 @@ nav.container {
     height: 100px;
     line-height: 100px;
     font-family: Roboto, cursive;
-    font-style: italic;
     font-weight: 300;
     font-size: 3rem;
     color: var(--foreground);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     transition: 0.3s;
     justify-content: center;
     padding: 10px;
 }
-
 
 .nav-link {
     position: relative;
@@ -219,16 +218,15 @@ html.is-leaving .transition-fade {
 /* -----------Page Contents----------- */
 
 .page-contents {
-    padding: 175px 0;
+    padding-top: 175px;
     width: 100%;
     overflow: hidden;
 }
 
 .page-contents .container {
-    height: calc(100vh - 120px);
-    max-height: 600px;
     position: relative;
     font-family: Roboto, cursive;
+    overflow: hidden;
 }
 
 .text-wrap {
@@ -243,6 +241,13 @@ html.is-leaving .transition-fade {
     letter-spacing: 0.15rem;
     padding: 5px;
     border-radius: 1.5px;
+}
+
+hr {
+    width: 90%;
+    margin: 50px auto;
+    height: 1px;
+    border: none;
 }
 
 /* -----------Home----------- */
@@ -273,6 +278,17 @@ html.is-leaving .transition-fade {
     background-color: var(--green-fade);
 }
 
+.text {
+    font-family: Roboto, cursive;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 55px;
+    letter-spacing: 0.01rem;
+    color: var(--foreground);
+    padding-inline: 15px;
+}
+
 /* -----------Contact----------- */
 
 #text-contact {
@@ -280,20 +296,15 @@ html.is-leaving .transition-fade {
     background-color: var(--pink-fade);
 }
 
-#contact-text {
-    font-family: Roboto, cursive;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: left;
-    padding-top: 100px;
-    color: var(--foreground);
+#contact-line {
+    background-color: var(--pink);
 }
 
 form, #contact-text-wrapper {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     border-radius: 5px;
     margin: 0 auto;
@@ -330,4 +341,11 @@ form button {
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+/* -----------About----------- */
+
+#about-text-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
 }
