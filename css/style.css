@@ -52,6 +52,17 @@ ul {
     list-style:none;
 }
 
+/* -----------Page Transition----------- */
+
+.transition-fade {
+    opacity: 1;
+    transition: 1s;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
 /* -----------Reusable CSS Code----------- */
 
 .container {
@@ -198,21 +209,6 @@ nav.container {
 .nav-link:hover::after {
     width: 100%;
     opacity: 0.1;
-}
-
-/* -----------Page Transition----------- */
-
-.transition-fade {
-    opacity: 1;
-    transition: 0.5s;
-}
-
-html.is-animating .transition-fade {
-    opacity: 0;
-}
-
-html.is-leaving .transition-fade {
-    opacity: 0;
 }
 
 /* -----------Page Contents----------- */
