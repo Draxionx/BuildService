@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Javascript Files -->
-    <script src="./js/app.js"></script>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="./css/style.css">
@@ -15,55 +12,63 @@
 </head>
 
 <body>
-<header>
-    <a href="#" class="logo">DRAXION</a>
-    <nav class="container">
-        <div class="links">
-            <ul>
-                <li>
-                    <a href="/index.html" class="nav-link" id="home">Home</a>
-                </li>
-                <li>
-                    <a href="/services.html" class="nav-link" id="services">Services</a>
-                </li>
-                <li>
-                    <a href="/builds.html" class="nav-link" id="builds">Builds</a>
-                </li>
-                <li>
-                    <a href="/about.html" class="nav-link" id="about">About</a>
-                </li>
-                <li>
-                    <a href="/contact.html" class="nav-link" id="contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<main id="swup" class="transition-fade">
-    <section class="page-contents" id="about-section">
-        <div class ="text-wrap">
-            <h3 id="text-about" class="page-title" >About</h3>
-        </div>
-        <div id="about-container" class="container">
-            <div id="about-text-wrapper" class="text-wrap">
-                <p id="about-text" class="text">
-                    Hello, my name is Dylan. I am a keyboard enthusiast in the Vancouver, British Columbia area.
-                    I have actively been in the hobby for just under 3 years now. I am currently a student and
-                    love spending my free time building custom keyboards.
-                </p>
+    <header>
+        <a href="#" class="logo">DRAXION</a>
+        <nav class="container">
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="/index.html" class="nav-link" id="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="/services.html" class="nav-link" id="services">Services</a>
+                    </li>
+                    <li>
+                        <a href="/builds.html" class="nav-link" id="builds">Builds</a>
+                    </li>
+                    <li>
+                        <a href="/about.html" class="nav-link" id="about">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html" class="nav-link" id="contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <div class="icon-container">
-                <i class="fa-brands fa-youtube"></i>
+        </nav>
+    </header>
+
+    <main id="swup" class="transition-fade">
+        <section class="page-contents" id="about-section">
+            <div class ="text-wrap">
+                <h3 id="text-about" class="page-title" >About</h3>
             </div>
-        </div>
-    </section>
-</main>
+            <div id="about-container" class="container">
+                <div id="about-text-wrapper" class="text-wrap">
+                    <p id="about-text" class="text">
+                        Hello, my name is Dylan. I am a keyboard enthusiast in the Vancouver, British Columbia area.
+                        I have actively been in the hobby for just under 3 years now. I am currently a student and
+                        love spending my free time building custom keyboards.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-<script> 
-    const swup = new Swup();
-</script>
+        <footer>
+            <div id="about-socials" class="socials">
+                <a href="#"><i class="fa fa-twitter"></i> </a>
+                <a href="#"><i class="fa fa-instagram"></i> </a>
+                <a href="#"><i class="fa fa-youtube"></i> </a>
+                <a href="#"><i class="fa fa-twitch"></i> </a>
+            </div>
+        </footer>
+    </main>
 
-</body>
+    <!-- Javascript Files -->
+    <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script> 
+        const swup = new Swup();
+    </script>
+
+    </body>
 </html>

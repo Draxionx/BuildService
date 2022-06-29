@@ -217,6 +217,7 @@ nav.container {
     padding-top: 175px;
     width: 100%;
     overflow: hidden;
+    min-height: calc(100vh - 150px);
 }
 
 .page-contents .container {
@@ -246,6 +247,16 @@ hr {
     border: none;
 }
 
+.text {
+    font-family: Roboto, cursive;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.01rem;
+    color: var(--foreground);
+    padding-inline: 15px;
+}
+
+
 /* -----------Home----------- */
 
 #text-home {
@@ -260,10 +271,66 @@ hr {
     background-color: var(--cyan-fade);
 }
 
+#services-text {
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 2;
+}
+
+#services-text-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.services-container {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--foreground);
+}
+
+.service-title {
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    font-size: 17px;
+    color: var(--cyan);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.services-subtitle {
+    text-decoration: underline;
+}
+
+#services-socials {
+    border-color: var(--cyan);
+}
+
+#services-socials a{
+    color: var(--cyan);
+}
+
+#services-socials a:hover{
+    background-color: var(--cyan-fade);
+}
+
 /* -----------Builds----------- */
 
 #text-builds {
     color: var(--purple);
+    background-color: var(--purple-fade);
+}
+
+#builds-socials {
+    border-color: var(--purple);
+}
+
+#builds-socials a{
+    color: var(--purple);
+}
+
+#builds-socials a:hover{
     background-color: var(--purple-fade);
 }
 
@@ -274,15 +341,26 @@ hr {
     background-color: var(--green-fade);
 }
 
-.text {
-    font-family: Roboto, cursive;
-    font-size: 15px;
-    font-weight: 300;
+#about-text {
     text-align: center;
+}
+
+#about-text-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
     padding-top: 55px;
-    letter-spacing: 0.01rem;
-    color: var(--foreground);
-    padding-inline: 15px;
+}
+
+#about-socials {
+    border-color: var(--green);
+}
+
+#about-socials a{
+    color: var(--green);
+}
+
+#about-socials a:hover{
+    background-color: var(--green-fade);
 }
 
 /* -----------Contact----------- */
@@ -290,10 +368,6 @@ hr {
 #text-contact {
     color: var(--pink);
     background-color: var(--pink-fade);
-}
-
-#contact-line {
-    background-color: var(--pink);
 }
 
 form, #contact-text-wrapper {
@@ -339,9 +413,51 @@ form button {
     text-transform: uppercase;
 }
 
-/* -----------About----------- */
+#contact-socials {
+    border-color: var(--pink);
+}
 
-#about-text-wrapper {
-    max-width: 750px;
+#contact-socials a{
+    color: var(--pink);
+}
+
+#contact-socials a:hover{
+    background-color: var(--pink-fade);
+}
+
+/* -----------Footer----------- */
+
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.socials {
+    width: 90%;
     margin: 0 auto;
+    text-align: center;
+    padding: 25px;
+    padding-bottom: 0px;
+    border-top: 1px solid;
+    margin-top: 50px;
+}
+
+.socials a{
+    font-size:20px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+    line-height: 40px;
+  }
+
+.socials a:hover{
+    opacity: 0.75;
+    border-radius: 1.5px;
 }

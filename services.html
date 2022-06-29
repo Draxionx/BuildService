@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Javascript Files -->
-    <script src="./js/app.js"></script>
-
     <!-- CSS Files -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -45,11 +42,51 @@
             <div class ="text-wrap">
                 <h3 id="text-services" class="page-title" >Services</h3>
             </div>
-            <div id="services-container" class="container">
+            <div class="services-container">
+                <h3 class="service-title">Keyboard Assembly</h3>
+                <p id="services-text" class="text">
+                    <ul class="services-subtitle">Assembly Procedure:</ul>
+                    <br>
+                    <ul>PCB Testing: PCB will be tested before and after soldering</ul>
+                    <ul>Stabilizer Tuning: Wire balancing and then lubing with Krytox 205g0 & Permatex dielectric grease</ul>
+                    <ul>Soldering: Kester Solder 63/37</ul>
+                    <ul>Cleaning PCB (Extra + $5): Cleaned using  99% isopropyl alcohol</ul>
+                    <br>
+                    <li>TKL & Above: $30 CAD</li>
+                    <li>75%-80%: $25 CAD</li>
+                    <li>60-65%: $20 CAD</li>
+                    <li>40% & Under: $15 CAD</li>
+                </p>
+                <h3 class="service-title">Millmax</h3>
+                <p class="services-text">
+                    <ul class="services-subtitle">Millmax PCB:</ul>
+                    <ul>(Provide your own millmax sockets)</ul>
+                    <br>
+                    <li>Standalone PCB Millmax: $20 CAD</li>
+                    <li>Add on to keyboard build: +$15 CAD</li>
+                </p>
+                <h3 class="service-title">Desoldering</h3>
+                <p class="services-text">
+                    <ul class="services-subtitle">Desoldering Service:</ul>
+                    <br>
+                    <li>Desoldering: Hakko FR-301 Desoldering Tool</li>
+                    <li>Cleaning: PCB Cleaned using  99% isopropyl alcohol</li>
+                </p>
             </div>
         </section>
+
+        <footer>
+            <div id="services-socials" class="socials">
+                <a href="#"><i class="fa fa-twitter"></i> </a>
+                <a href="#"><i class="fa fa-instagram"></i> </a>
+                <a href="#"><i class="fa fa-youtube"></i> </a>
+                <a href="#"><i class="fa fa-twitch"></i> </a>
+            </div>
+        </footer>
     </main>
 
+    <!-- Javascript Files -->
+    <script src="./js/app.js"></script>
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script> 
         const swup = new Swup();

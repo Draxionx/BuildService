@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Javascript Files -->
-    <script src="./js/app.js"></script>
+    <script src="https://kit.fontawesome.com/23493c504e.js" crossorigin="anonymous"></script>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="./css/style.css">
@@ -56,41 +54,32 @@
                     </p>
                 </div>
 
-                <form onsubmit="sendEmail(); reset(); return false;">
+                <form class="contact-form" action="contactform.php" method="post">
                     <input type="text" id="name" placeholder="Name" required>
                     <input type="email" id="email" placeholder="Email" required>
                     <textarea id="message" rows="5" placeholder="How can I help?"></textarea>
-                    <button type="submit">Submit</button>
+                    <button id="submit">Submit</button>
                 </form>
             </div>
         </section>
+
+        <footer>
+            <div id="contact-socials" class="socials">
+                <a href="#"><i class="fa fa-twitter"></i> </a>
+                <a href="#"><i class="fa fa-instagram"></i> </a>
+                <a href="#"><i class="fa fa-youtube"></i> </a>
+                <a href="#"><i class="fa fa-twitch"></i> </a>
+            </div>
+        </footer>
     </main>
 
-    <footer>
-        <hr id="contact-line">
-    </footer>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                SecureToken: "2b04d277-364b-4833-9bd9-1a1b0e373765",
-                To : 'Draxion1015@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "New Keyboard Build Service Enquiry",
-                Body : "Name: " + document.getElementById("name").value
-                        + "<br><br> Email: " + document.getElementById("email").value
-                        + "<br><br>  Message: " + document.getElementById("message").value
-            }).then(
-                message => alert("Message Sent Successfully")
-            );
-        }
-    </script>
-
+    <!-- Javascript Files -->
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script> 
         const swup = new Swup();
     </script>
+
+    <script src="./js/app.js"></script>
 
 </body>
 </html>

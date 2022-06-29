@@ -4,12 +4,8 @@ const header = document.querySelector("header");
 
 function stickyNavbar() {
     header.classList.toggle("scrolled", window.scrollY > 0);
-    console.log(window.scrollY > 0);
 }
 
 stickyNavbar();
 
 window.addEventListener("scroll", stickyNavbar);
-
-
-// -----------Contact Email----------- \\
